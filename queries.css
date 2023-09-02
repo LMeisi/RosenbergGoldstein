@@ -1,0 +1,155 @@
+/* 
+
+sm: 576px
+md: 768px
+lg: 992px
+xl: 1200px
+xxl: 1400px
+
+.display-2 {
+    font-size: calc(1.575rem + 3.9vw);
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+
+.display-3 {
+    font-size: calc(1.525rem + 3.3vw);
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.display-4 {
+    font-size: calc(1.475rem + 2.7vw);
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.display-5 {
+    font-size: calc(1.425rem + 2.1vw);
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.fs-3 {
+    font-size: calc(1.3rem + .6vw)!important;
+}
+
+.fs-4 {
+    font-size: calc(1.275rem + .3vw)!important;
+}
+
+.fs-5 {
+    font-size: 1.25rem!important;
+}
+
+.fs-6 {
+    font-size: 1rem!important;
+}
+
+*/
+
+/* XL */
+@media (max-width: 1199px) {
+  /* history: make font smaller*/
+  .history-year {
+    font-size: 1.05rem !important;
+  }
+  .history-event {
+    font-size: 1.05rem !important;
+  }
+
+  .history-text {
+    font-size: 0.85rem !important;
+  }
+}
+
+/* Large */
+@media (max-width: 992px) {
+  /* Delete gray gradient background */
+  .bg-light-gradient {
+    background-image: none;
+  }
+
+  /* history: restore default font size */
+  .history-year {
+    font-size: 1.25rem !important;
+  }
+  .history-event {
+    font-size: 1.25rem !important;
+  }
+
+  .history-text {
+    font-size: 1rem !important;
+  }
+}
+
+/* Medium */
+@media (max-width: 768px) {
+  /* Move caption up */
+  .carousel-caption {
+    bottom: 20%;
+  }
+
+  /* display - 4 syntax below */
+  .carousel-caption h1 {
+    font-size: calc(1.475rem + 2.7vw);
+    font-weight: 300;
+    line-height: 1.2;
+  }
+
+  /* Make caption button size smaller */
+  .carousel-caption .btn {
+    font-size: small;
+  }
+
+  /* history: make font smaller again */
+  .history-year {
+    font-size: 1.05rem !important;
+  }
+  .history-event {
+    font-size: 1.05rem !important;
+  }
+
+  .history-text {
+    font-size: 0.85rem !important;
+  }
+}
+
+/* custom breakpoint */
+@media (max-width: 670px) {
+  /* Smaller font size: fs-4 */
+  .accolade-number {
+    font-size: calc(1.275rem + 0.3vw) !important;
+  }
+
+  /* Smaller font size: Less than fs-6 */
+  .accolade-event {
+    font-size: 0.85rem !important;
+  }
+}
+
+/* small */
+@media (max-width: 576px) {
+}
+
+/* ************************ */
+/* FIXING Safari flexbox gap 
+/* ************************ */
+
+/* Since some Safari browsers don't support gap property for flexbox, we have to manually add the gap properties to the flexboxes in the code */
+/* If browser support not found for flexbox gap, below code will be added; The control is in Javascript */
+/* NOTE: pre-written code was added in JS to add 'no-flexbox-gap' class to 'body' element when code run in safari */
+/* NOTE: Have to make sure the margin for each element below matches with the margin in the actual CSS properties */
+/* NOTE: OK to add media queries again (same width) */
+/* NOTE: Below gap should be added to all elements that are not the last element of the flex container, so no gap added after the last element */
+
+/* How to add: check all the 'gap' of all css properties, focus on the flexbox containers only, and add the margins accordingly to the flexbox's child elements (except the last element) */
+/* How to adjust media queries.part 1: Check all gaps in queries.css, anytime there's a gap newly defined in queries, you have to set that breakpoint and adjust the margin-right for that particular breakpoint */
+/* How to adjust media queries.part 2: Check all gaps and see if flex direction changes from horizontal to vertical at certain breakpoints, If so, then add media query at that breakpoint, and reset the margin-right to 0, and set margin-bottom to the flex-box gap width; vice versa if flex is changed from vertical to horizontal */
+/* How to adjust media queries.part 3: Find the flexbox gap, and add margin to the child elements of the flexbox element just like in normal flexbox adjustment. Focus on the child elements */
+
+/* Parent container: d-flex */
+.no-flexbox-gap .d-flex .nav-link:not(:last-child) {
+  margin-right: 8px;
+}
