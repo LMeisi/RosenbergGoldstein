@@ -11,6 +11,28 @@
       content="Rosenberg & Goldstein is one of the most prestigious law firms in the country. We handle cases that range across all legal fields. "
     />
 
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- bootstrap link for js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Default bootstrap link for CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
     <!-- icon in title - 64 by 64 -->
     <link rel="icon" href="img/logo64by64.jpg" />
 
@@ -37,24 +59,29 @@
       rel="stylesheet"
     />
 
-    <!-- Default bootstrap link for CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
-    />
-
     <!-- Bootstrap icons -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
     />
 
+    <!-- ion icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
     <!-- Custom CSS stylesheet -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="general.css" />
     <link rel="stylesheet" href="queries.css" />
+
+    <!-- javascript file -->
+    <script src="script.js"></script>
 
     <title>R&G - Attorney</title>
   </head>
@@ -62,7 +89,9 @@
   <body>
     <!-- navbar -->
     <!-- navbar to expand to list when screen become lg -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top bg-dark-green">
+    <nav
+      class="navbar navbar-expand-lg navbar-light sticky-top bg-green-gradient"
+    >
       <!-- container so navbar doesn't go all the way to the sides -->
       <div class="container-lg">
         <!-- navbar brand -->
@@ -90,7 +119,7 @@
           class="collapse navbar-collapse justify-content-end align-items-center"
           id="main-nav"
         >
-          <ul class="navbar-nav text-nowrap">
+          <ul class="navbar-nav text-nowrap align-items-center">
             <li class="nav-item ms-2">
               <a class="nav-link text-white" href="index.html">Home</a>
             </li>
@@ -111,9 +140,7 @@
               <a class="nav-link text-white" href="index.html#faqs">FAQs</a>
             </li>
             <li class="nav-item ms-2">
-              <a class="nav-link text-white" href="index.html#contact"
-                >Contact</a
-              >
+              <a class="nav-link text-white" href="#contact">Contact</a>
             </li>
             <!-- Note there's no 'nav-link' for last anchor -->
             <li class="nav-item ms-0 ms-lg-3">
@@ -127,11 +154,11 @@
             <li class="nav-item ms-2 d-none d-lg-inline">
               <!-- facebook -->
               <a
-                class="nav-link text-decoration-none"
+                class="nav-link nav-link-icon text-decoration-none"
                 href="http://www.facebook.com"
               >
                 <ion-icon
-                  class="social-icon fs-4 text-white"
+                  class="social-icon fs-4 text-white align-middle"
                   name="logo-facebook"
                 ></ion-icon>
               </a>
@@ -139,11 +166,11 @@
             <!-- linkedin -->
             <li class="nav-item d-none d-lg-inline">
               <a
-                class="nav-link text-decoration-none"
+                class="nav-link nav-link-icon text-decoration-none"
                 href="http://www.linkedin.com"
               >
                 <ion-icon
-                  class="social-icon fs-4 text-white"
+                  class="social-icon fs-4 text-white align-middle"
                   name="logo-linkedin"
                 ></ion-icon>
               </a>
@@ -151,11 +178,11 @@
             <!-- twitter -->
             <li class="nav-item d-none d-lg-inline">
               <a
-                class="nav-link text-decoration-none"
+                class="nav-link nav-link-icon text-decoration-none"
                 href="http://twitter.com"
               >
                 <ion-icon
-                  class="social-icon fs-4 text-white"
+                  class="social-icon fs-4 text-white align-middle"
                   name="logo-twitter"
                 ></ion-icon>
               </a>
@@ -166,15 +193,15 @@
     </nav>
 
     <!-- Breadcrumbs -->
-    <section id="#breadcrumb" class="bg-less-dark-green">
+    <section id="#breadcrumb" class="bg-light-gradient">
       <div class="container-lg py-2">
         <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
           <ol class="breadcrumb mb-2">
             <li class="breadcrumb-item">
-              <a href="index.html" class="text-white fw-bold">Home</a>
+              <a href="index.html" class="text-darker-green">Home</a>
             </li>
             <li class="breadcrumb-item active" aria-current="page">
-              <span class="text-white">Attorney</span>
+              <span class="text-darker-green fw-bold">Peter Goldstein</span>
             </li>
           </ol>
         </nav>
@@ -197,7 +224,7 @@
           <!-- img col, only display when sm screen and up -->
           <div class="col-md-5 px-4 my-3 my-md-4 text-center">
             <img
-              class="img-fluid shadow"
+              class="img-fluid shadow fading-img rounded"
               src="img/attorney-2-aspected-sqshed.jpg"
               alt="about us image"
             />
@@ -244,7 +271,7 @@
         </div>
 
         <!-- text segment -->
-        <div class="pb-4 px-3">
+        <div class="pb-4 px-3 fadein">
           <!-- Experience segment -->
           <div class="pb-2">
             <p>
@@ -295,7 +322,7 @@
     <!-- CTA Section -->
     <section
       id="cta"
-      class="my-0 cta-container bg-less-darker-green text-lighter-green"
+      class="my-4 cta-container bg-less-darker-green text-lighter-green fadein scroll-margin-top"
     >
       <!-- <section id="cta" class="my-5 bg-less-darker-green text-lighter-green"> -->
       <div class="container-lg px-4">
@@ -307,13 +334,13 @@
             <h1 class="mt-3">
               <div class="display-5 cta-title">
                 <!-- <h2 class="fs-6 mb-3 fw-bold text-secondary">GET IN TOUCH</h2> -->
-                <h1 class="fs-2">Need help? We are here for you</h1>
+                <h1 class="fs-2">Get In Touch</h1>
               </div>
             </h1>
             <p class="my-5 pt-2">
-              Contact us today for a free consultation. Our attorneys will give
-              you a free evaluation of your case and discuss your initial legal
-              options with full confidentiality.
+              We are here to help. Our attorneys will give you a free evaluation
+              of your case and discuss your initial legal options with full
+              confidentiality. Contact us today for a free consultation.
               <br /><br />You could reach us at <b>800-456-7786</b> or you could
               fill out the form on the right to request a free consultation.
             </p>
@@ -321,10 +348,15 @@
 
           <!-- Form col -->
           <div class="col-md-6 mt-1 ps-3 pe-3">
-            <form class="mt-3 pt-2 mx-4">
+            <form
+              id="form"
+              class="mt-3 pt-2 mx-4"
+              novalidate
+              autocomplete="off"
+            >
               <!-- Name: Use input-group for input -->
               <label for="name" class="form-label">Name:</label>
-              <div class="input-group mb-4">
+              <div class="input-group mb-1">
                 <span class="input-group-text">
                   <i class="bi bi-person-fill"></i>
                 </span>
@@ -341,17 +373,19 @@
                   <span
                     class="tt"
                     data-bs-placement="bottom"
-                    title="Enter your name"
+                    title="Please enter your name"
                   >
                     <i class="bi bi-question-circle text-muted"></i>
                   </span>
                 </span>
               </div>
+              <!-- Error message -->
+              <p id="name-feedback"></p>
 
               <!-- Email -->
-              <label for="email" class="form-label">Email address:</label>
+              <label for="email" class="form-label mt-3">Email address:</label>
               <!-- Use input-group (to include icons in the input fields) -->
-              <div class="mb-4 input-group">
+              <div class="mb-1 input-group">
                 <span class="input-group-text">
                   <i class="bi bi-envelope-fill"></i>
                 </span>
@@ -368,38 +402,50 @@
                   <span
                     class="tt"
                     data-bs-placement="bottom"
-                    title="Enter an email address we can reply to"
+                    title="Please enter a valid email address"
                   >
                     <i class="bi bi-question-circle text-muted"></i>
                   </span>
                 </span>
               </div>
+              <!-- Error message -->
+              <p id="email-feedback"></p>
 
-              <!-- Description -->
-              <label for="query" class="form-label"
+              <!-- Message -->
+              <label for="message" class="form-label mt-3"
                 >Brief Description of your case:
               </label>
               <!-- input -->
-              <div class="mb-4 input-group">
+              <div class="mb-1 input-group">
                 <textarea
-                  id="query"
+                  id="message"
                   class="form-control"
                   style="height: 140px"
                   placeholder="Case facts, history, dispute, witness, etc."
                 ></textarea>
               </div>
+              <!-- Error message -->
+              <p id="message-feedback"></p>
 
               <!-- button container -->
-              <div class="text-center">
+              <div class="text-center pt-3">
                 <!-- modal button -->
-                <button
+                <input
                   type="submit"
+                  id="submit-button"
                   class="btn btn-white-gray mt-4 mb-5 px-3 py-2 fw-bold shadow"
+                  value="Request Free Consultation"
+                />
+                <!-- <button
+                  type="button"
+                  class="btn btn-white-gray mt-4 mb-5 px-3 py-2 fw-bold shadow"
+                  value="Request Free
+              Consultation"
                   data-bs-toggle="modal"
                   data-bs-target="#request-modal"
                 >
                   Request Free Consultation
-                </button>
+                </button> -->
               </div>
             </form>
           </div>
@@ -407,8 +453,117 @@
       </div>
     </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="mt-5 pb-2 fadein scroll-margin-top">
+      <div class="container-lg px-4 py-5">
+        <!-- section title -->
+        <div class="text-center">
+          <h1 class="fs-2 text-dark-green">Contact</h1>
+        </div>
+        <!-- section grid - text and map -->
+        <div class="row pt-5 align-items-top justify-content-center">
+          <!-- Text col -->
+          <div class="col-lg-5 mt-1 mb-5">
+            <!-- How to Find Us Segment -->
+            <!-- How to find us title -->
+            <div class="mb-4 pb-1">
+              <h4 class="fs-5">HOW TO FIND US</h4>
+            </div>
+
+            <!-- How to Find us grids -->
+            <!-- How to Find us content - address -->
+            <div class="row px-2 align-items-top justify-content-start">
+              <!-- icon address -->
+              <div class="col-1">
+                <i class="bi bi-geo-alt-fill text-secondary"></i>
+              </div>
+              <!-- contact address -->
+              <div class="col-8">
+                <p>202 N. Robertson Street<br />Chicago, Illinois 60665</p>
+              </div>
+            </div>
+
+            <!-- How to Find us content - phone -->
+            <div class="row my-2 px-2 align-items-top justify-content-start">
+              <!-- icon phone -->
+              <div class="col-1">
+                <i class="bi bi-telephone-fill text-secondary"></i>
+              </div>
+              <!-- contact phone -->
+              <div class="col-8">
+                <a
+                  href="tel:800-533-6788"
+                  class="contact-link-text text-decoration-none"
+                  >(800) 533-6788</a
+                >
+              </div>
+            </div>
+
+            <!-- How to Find us content - mail -->
+            <div class="row my-2 px-2 align-items-top justify-content-start">
+              <!-- icon mail -->
+              <div class="col-1">
+                <i class="bi bi-envelope"></i>
+              </div>
+              <!-- contact mail -->
+              <div class="col-8">
+                <a
+                  href="mailto:contact@rosengold.com"
+                  class="contact-link-text text-decoration-none"
+                  >contact@rosengold.com</a
+                >
+              </div>
+            </div>
+
+            <!-- Opening Hours Segment -->
+            <!-- Opening hours title -->
+            <div class="mt-5 pt-2 mb-4 pb-1">
+              <h4 class="fs-5">OPENING HOURS</h4>
+            </div>
+
+            <!-- Opening hours grids -->
+            <!-- Weekdays -->
+            <div class="row my-2 px-2 align-items-center justify-content-start">
+              <!-- Days -->
+              <div class="col-4 col-md-3 col-lg-6">Monday - Friday</div>
+              <!-- Time -->
+              <div class="col-4 col-md-3 col-lg-6">10:00 - 18:00</div>
+            </div>
+
+            <!-- Weekends -->
+            <div class="row my-2 px-2 align-items-center justify-content-start">
+              <!-- Days -->
+              <div class="col-4 col-md-3 col-lg-6">Saturday</div>
+              <!-- Time -->
+              <div class="col-4 col-md-3 col-lg-6">10:00 - 14:00</div>
+            </div>
+
+            <div class="row my-2 px-2 align-items-center justify-content-start">
+              <!-- Days -->
+              <div class="col-4 col-md-3 col-lg-6">Sunday</div>
+              <!-- Time -->
+              <div class="col-4 col-md-3 col-lg-6">10:00 - 14:00</div>
+            </div>
+          </div>
+
+          <!-- Map col -->
+          <div class="col-lg-7 mt-1 align-items-center justify-content-center">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.420043740736!2d-87.63426648448966!3d41.883822779221695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fce15bc745ef9%3A0x7b402e91b51943f9!2sCity%20of%20Chicago%20-%20City%20Hall!5e0!3m2!1sen!2sus!4v1674953607303!5m2!1sen!2sus"
+              width="100%"
+              height="423px"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
-    <footer id="footer-section" class="bg-darker-green">
+    <footer id="footer-section" class="bg-green-gradient-bottom">
       <div class="container-lg px-4 pt-5 pb-4">
         <!-- footer grid -->
         <div
@@ -420,15 +575,15 @@
             <div class="text-center text-md-start">
               <a href="#" class="text-decoration-none">
                 <img
-                  class="logo"
-                  alt="rumbling dumpling logo"
+                  class="logo footer-logo"
+                  alt="Rosenberg & Goldstein logo"
                   src="img/logo-10.png"
                 />
               </a>
             </div>
             <!-- brief intro div -->
             <div class="pt-4">
-              <p class="small text-light-green text-center text-md-start">
+              <p class="small text-lighter-green text-center text-md-start">
                 Providing professional and trusted <br />legal guidance for
                 clients in need. <br /><br />Call 800-533-6788 for a free
                 consultation
@@ -438,7 +593,7 @@
               >
                 <!-- facebook -->
                 <a
-                  class="nav-link text-decoration-none"
+                  class="nav-link nav-link-icon text-decoration-none"
                   href="http://www.facebook.com"
                 >
                   <ion-icon
@@ -449,7 +604,7 @@
 
                 <!-- linkedin -->
                 <a
-                  class="nav-link text-decoration-none"
+                  class="nav-link nav-link-icon text-decoration-none"
                   href="http://www.linkedin.com"
                 >
                   <ion-icon
@@ -460,7 +615,7 @@
 
                 <!-- twitter -->
                 <a
-                  class="nav-link text-decoration-none"
+                  class="nav-link nav-link-icon text-decoration-none"
                   href="http://twitter.com"
                 >
                   <ion-icon
@@ -492,35 +647,35 @@
                   <li class="pb-2">
                     <a
                       href="aboutus.html"
-                      class="text-decoration-none text-light-green"
+                      class="footer-link text-decoration-none text-lighter-green"
                       >About Us</a
                     >
                   </li>
                   <li class="pb-2">
                     <a
                       href="index.html#services"
-                      class="text-decoration-none text-light-green"
+                      class="footer-link text-decoration-none text-lighter-green"
                       >Services</a
                     >
                   </li>
                   <li class="pb-2">
                     <a
                       href="index.html#attorneys"
-                      class="text-decoration-none text-light-green"
+                      class="footer-link text-decoration-none text-lighter-green"
                       >Attorneys</a
                     >
                   </li>
                   <li class="pb-2">
                     <a
                       href="index.html#faqs"
-                      class="text-decoration-none text-light-green"
+                      class="footer-link text-decoration-none text-lighter-green"
                       >FAQs</a
                     >
                   </li>
                   <li class="pb-2">
                     <a
                       href="index.html#contact"
-                      class="text-decoration-none text-light-green"
+                      class="footer-link text-decoration-none text-lighter-green"
                       >Contact</a
                     >
                   </li>
@@ -544,28 +699,28 @@
                   <li class="pb-2">
                     <a
                       href="bankruptcy.html"
-                      class="text-decoration-none text-light-green"
+                      class="footer-link text-decoration-none text-lighter-green"
                       >Bankruptcy</a
                     >
                   </li>
                   <li class="pb-2">
                     <a
                       href="realestate.html"
-                      class="text-decoration-none text-light-green"
+                      class="footer-link text-decoration-none text-lighter-green"
                       >Real Estate</a
                     >
                   </li>
                   <li class="pb-2">
                     <a
                       href="financing.html"
-                      class="text-decoration-none text-light-green"
+                      class="footer-link text-decoration-none text-lighter-green"
                       >Financing</a
                     >
                   </li>
                   <li class="pb-2">
                     <a
                       href="patents.html"
-                      class="text-decoration-none text-light-green"
+                      class="footer-link text-decoration-none text-lighter-green"
                       >Patents</a
                     >
                   </li>
@@ -576,7 +731,7 @@
         </div>
         <!-- footer copyright link -->
         <div class="border-top border-secondary text-center text-md-start">
-          <p class="pt-2 small text-light-green">
+          <p class="pt-2 small text-lighter-green">
             Copyright &copy; 2023 by Rosenberg & Goldstein, LLP. All rights
             reserved.
           </p>
@@ -592,15 +747,13 @@
       aria-labelledby="modal-title"
       aria-hidden="true"
     >
-      <!-- The white part (by default) of the modal -->
       <div class="modal-dialog">
         <div class="modal-content px-3">
-          <!-- modal-header (including close button) -->
           <div class="modal-header">
-            <!-- modal title id to match with 'aria-baelledby' in 'modal' class -->
             <h5 class="modal-title" id="modal-title">Request Sent!</h5>
             <!-- Close modal button -->
             <button
+              id="modal-close-button"
               type="button"
               class="btn-close"
               data-bs-dismiss="modal"
@@ -620,6 +773,7 @@
           <!-- modal-footer -->
           <div class="modal-footer justify-content-center">
             <button
+              id="modal-footer-button"
               class="btn btn-dark-green"
               data-bs-dismiss="modal"
               aria-label="Close"
@@ -631,49 +785,14 @@
       </div>
     </div>
 
-    <!-- bootstrap link for js -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- icon icons -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-
-    <!-- For Safari Flexbox gap -->
+    <!-- Tooltip javascript -->
     <script>
-      ///////////////////////////////////////////////////////////
-      // Fixing flexbox gap property missing in some Safari versions
-
-      /* Since some Safari browsers don't support gap property for flexbox, we have to manually add the gap properties to the flexboxes in CSS */
-      /* Below code when executed, will add the 'no-flexbox-gap' class to body, thus triggering the 'no-flexbox-gap' class related formats to apply (all flex gap related) */
-
-      function checkFlexGap() {
-        var flex = document.createElement("div");
-        flex.style.display = "flex";
-        flex.style.flexDirection = "column";
-        flex.style.rowGap = "1px";
-
-        flex.appendChild(document.createElement("div"));
-        flex.appendChild(document.createElement("div"));
-
-        document.body.appendChild(flex);
-        var isSupported = flex.scrollHeight === 1;
-        flex.parentNode.removeChild(flex);
-        console.log(isSupported);
-
-        // If browser doesn't support, add below class to body
-        if (!isSupported) document.body.classList.add("no-flexbox-gap");
-      }
-      checkFlexGap();
+      // Select all (custom) tt class elements
+      const tooltips = document.querySelectorAll(".tt");
+      // For each tt element, create a bootstrap Tooltip for it, enable the tooltip functionality to this element
+      tooltips.forEach((t) => {
+        new bootstrap.Tooltip(t);
+      });
     </script>
   </body>
 </html>

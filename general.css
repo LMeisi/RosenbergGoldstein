@@ -134,6 +134,21 @@ Medium: 11px
 
 /* text */
 
+/* Fade in on page load */
+body {
+  animation: fadeInAnimation ease-in-out 0.3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .text-lighter-green {
   color: #e6eced;
 }
@@ -178,6 +193,7 @@ Medium: 11px
 
 .bg-dark-green {
   background-color: #004247;
+  opacity: 0.97;
 }
 
 .bg-less-darker-green {
@@ -193,6 +209,22 @@ Medium: 11px
   background-image: linear-gradient(to right top, #ffffff, #eaeaea6f);
 }
 
+.bg-green-gradient {
+  background-image: linear-gradient(to top, #004247f1, #00282bf9);
+}
+
+.bg-green-gradient-side {
+  background-image: linear-gradient(to left top, #004247f1, #00282b);
+}
+
+.bg-green-gradient-bottom {
+  background-image: linear-gradient(to bottom, #004247f7, #00282b);
+}
+
+.bg-green-gradient-bottom-lighter {
+  background-image: linear-gradient(to bottom, #004247f7, #00282bf2);
+}
+
 /* shadow */
 .box-shadow {
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.633);
@@ -203,6 +235,16 @@ Medium: 11px
 }
 
 /* btn */
+.btn-learn-more {
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-learn-more:hover {
+  border-color: #001a1c !important;
+  background-color: #e6eced !important;
+  color: #003b40 !important;
+}
+
 .btn-white-gray,
 .btn-white-gray:link,
 .btn-white-gray:visited {
@@ -212,6 +254,7 @@ Medium: 11px
   /* border-color: #003b40; */
   color: #001a1c;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.156);
+  transition: all 0.3s ease-in-out;
 }
 
 .btn-white-gray:hover,
@@ -226,7 +269,7 @@ Medium: 11px
 .btn-dark-green,
 .btn-dark-green:link,
 .btn-dark-green:visited {
-  background-color: #002124;
+  background-color: #004247;
   border-color: #e6eced;
   color: #e6eced;
 }
@@ -234,7 +277,15 @@ Medium: 11px
 .btn-dark-green:hover,
 .btn-dark-green:active {
   /* background-color: #001415; */
-  background-color: #004247;
+  /* background-color: #004247;
   border-color: #e6eced;
-  color: #e6eced;
+  color: #e6eced; */
+  border-color: #001a1c !important;
+  background-color: #e6eced !important;
+  color: #003b40 !important;
+}
+
+/* For Scrolling - to let scrolling add the navbar height */
+.scroll-margin-top {
+  scroll-margin-top: 45px;
 }

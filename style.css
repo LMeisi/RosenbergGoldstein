@@ -11,6 +11,15 @@
   gap: 8px;
 }
 
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  /* opacity: 0; */
+  box-shadow: none;
+}
+
 .navbar-toggler-icon {
   background-color: rgba(255, 255, 255, 0.811);
   border-radius: 2px;
@@ -19,6 +28,47 @@
 
 .navbar-nav {
   font-weight: 600;
+}
+
+.navbar-brand {
+  transition: all 0.2s ease-in-out;
+  opacity: 0.92;
+}
+
+.navbar-brand:hover {
+  /* transform: scale(1.01);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.515); */
+  opacity: 1;
+}
+
+.nav-link {
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+.nav-link:not(.nav-link-icon)::after {
+  content: "";
+  opacity: 0;
+  transition: all 0.3s;
+  height: 2px;
+  width: 100%;
+  background-color: #e6eced;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.nav-link:not(.nav-link-icon):hover::after {
+  opacity: 1;
+}
+
+.nav-link-icon {
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-link-icon:hover {
+  transform: scale(1.09);
+  text-shadow: 1px 1px 2px #000000;
 }
 
 /* Set hero section to start at the same spot as the navbar */
@@ -61,18 +111,62 @@
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.515);
 }
 
+/* .section-subtitle {
+  color: #004247 !important;
+} */
+
+/* Services section */
+.section-subtitle-light {
+  color: #e6eced !important;
+}
+
+/* .section-title {
+  text-shadow: 1px 1px 1px rgba(203, 203, 203, 0.167);
+} */
+
 #about {
   margin-top: 4rem;
   margin-bottom: 4rem;
+}
+
+.about-img {
+  opacity: 0.97;
+  transition: all 0.3s ease-in-out;
+  /* border-radius: 3px; */
+}
+
+.about-img:hover {
+  opacity: 1;
 }
 
 .about-us-img {
   width: 45%;
 }
 
+.accordion-button {
+  transition: all 0.25s linear;
+}
+
 .accordion-button:not(.collapsed) {
   color: #e6eced;
   background-color: #003b40;
+  background-image: linear-gradient(to left top, #004247ed, #00282bde);
+}
+
+.accordion-button:hover {
+  color: #e6eced;
+  /* background-color: #003b40; */
+  background-image: linear-gradient(to left top, #004247ed, #00282bde);
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: rgba(0, 0, 0, 0.125);
+}
+
+/* Change the accordion arrow color to white, check "fill" in the URL below */
+.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
 }
 
 /* .accordion-button:not(.collapsed) {
@@ -94,6 +188,45 @@
   background-attachment: fixed;
 }
 
+.accolade-number {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  background: linear-gradient(to right, #001d1f, #00282b 50%, #01545a 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 300ms ease;
+}
+
+.accolade-number:hover {
+  background-position: 0 100%;
+}
+
+.attorney-img {
+  opacity: 0.93;
+  transition: all 0.3s ease-in-out;
+}
+
+.attorney-img:hover {
+  opacity: 1;
+  /* transform: scale(1.1); */
+}
+
+.attorney-img-box {
+  transition: all 0.3s;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.attorney-img-box:hover {
+  transform: translateY(-0.8rem);
+  /* box-shadow: 0 0.2rem 0.45rem rgba(0, 0, 0, 0.329); */
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.065);
+}
+
 /* .cta-container {
   background-image: linear-gradient(
       rgba(211, 211, 211, 0.83),
@@ -106,6 +239,15 @@
   
 } */
 
+.faq-img {
+  opacity: 0.93;
+  transition: all 0.3s ease-in-out;
+}
+
+.faq-img:hover {
+  opacity: 1;
+}
+
 .cta-container {
   background-image: linear-gradient(to bottom, #000d0eb3, #000d0e),
     url("img/cta-sqed.jpg");
@@ -117,11 +259,106 @@
   background-attachment: fixed;
 }
 
+.form-control:focus {
+  box-shadow: none;
+  border-color: #b3c6c8;
+}
+
+/* Error messages */
+#name-feedback,
+#email-feedback,
+#message-feedback {
+  font-style: italic;
+  /* color: white; */
+  /* opacity: 0; */
+  display: none;
+  margin-bottom: 0.25rem;
+}
+
+.footer-logo {
+  transition: all 0.2s;
+  opacity: 0.9;
+}
+
+.contact-link-text {
+  color: #212529;
+  transition: all 0.2s;
+}
+
+.contact-link-text:hover {
+  color: #000000;
+  text-shadow: 0px 1px 0px #00000060;
+}
+
+/* .footer-logo:hover {
+  transform: scale(1.02);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.515);
+  opacity: 1;
+} */
+
+.footer-link {
+  transition: all 0.3s ease-in-out !important;
+}
+
+.footer-link:hover {
+  text-decoration: underline !important;
+}
+
+/* ////// Image Fading Effects */
+.fading-img {
+  opacity: 0.96;
+  transition: all 0.3s ease-in-out;
+}
+
+.fading-img:hover {
+  opacity: 1;
+}
+
+/* Case Images for each service page */
+.case-img {
+  opacity: 0.93;
+  transition: all 0.3s ease-in-out;
+}
+
+.case-img:hover {
+  opacity: 1;
+  /* transform: scale(1.1); */
+}
+
+.case-img-box {
+  transition: all 0.3s;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.case-img-box:hover {
+  transform: translateY(-0.5rem);
+  /* box-shadow: 0 0.2rem 0.45rem rgba(0, 0, 0, 0.329); */
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.065);
+}
+
 /* /////////////////////////////////////////////// */
 /* For Sub Pages */
 /* /////////////////////////////////////////////// */
 
 /* Apply to Breadcrumb divider */
 li.breadcrumb-item.active::before {
-  color: white;
+  color: #004247;
+  /* text-darker-green */
 }
+
+/* // Fading Effects ///////////////////////// */
+/* For Fading on Scroll */
+.fadein {
+  /* fade in */
+  opacity: 0;
+  /* slide in from left */
+  /* margin-left: -300px;
+  max-width: 100%; */
+}
+
+/* For navbar collapse  */
+/* .navbar-collapse {
+  max-height: 280px;
+  overflow-y: auto;
+} */
